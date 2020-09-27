@@ -1,0 +1,119 @@
+/* CSS Document */
+
+/******** 1.1 Loader pace ********/
+.pace { -webkit-pointer-events: none; pointer-events: none;-webkit-user-select:none; -moz-user-select:none; user-select:none;}
+.pace-inactive { display:none; }
+.pace .pace-progress {background:#3bc0c3; position:fixed; z-index:2000; top:0;  right:100%; width:100%; height: 3px;}
+.pace .pace-progress-inner {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #3bc0c3, 0 0 5px #3bc0c3;
+  opacity: 1.0;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -moz-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  -o-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+.pace .pace-activity {
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  top: 80px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  border: solid 2px transparent;
+  border-top-color: #3bc0c3;
+  border-left-color: #3bc0c3;
+  border-radius: 50px;
+  -webkit-animation: pace-spinner 400ms linear infinite;
+  -moz-animation: pace-spinner 400ms linear infinite;
+  -ms-animation: pace-spinner 400ms linear infinite;
+  -o-animation: pace-spinner 400ms linear infinite;
+  animation: pace-spinner 400ms linear infinite;
+}
+@-webkit-keyframes pace-spinner {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-moz-keyframes pace-spinner {
+  0% { -moz-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-o-keyframes pace-spinner {
+  0% { -o-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-ms-keyframes pace-spinner {
+  0% { -ms-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes pace-spinner {
+  0% { transform: rotate(0deg); transform: rotate(0deg); }
+  100% { transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+/******** 1.2 @font ********/
+@font-face {
+	font-family: "HATTEN";/*数字字体2*/
+	src: url('../fonts/hatten-webfont.eot');
+	src: url('../fonts/hatten-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('../fonts/hatten-webfont.woff') format('woff'), /* chrome, firefox */
+		 url('../fonts/HATTEN.TTF') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../fonts/hatten-webfont.svg#HATTEN') format('svg'); /* iOS 4.1- */
+}
+
+/******** 2. Echarts Size ********/
+.tabsbox{ height: 40px;}
+.echartmapbox{ height: 440px;}
+.echartmapbox2{ height: 490px;}
+.echartbarbox{ height: 60px;}
+.echartbox1{height: 240px;}
+.echartbox2{ height: 260px;}
+.echartbox3{ height: 270px;}
+.echartbox4{height: 150px;}
+.echartbox5{height: 200px;}
+.echartbox6{height: 220px;}
+
+/********* 3. Padding - Margin *********/
+
+.m-l-4{ margin-left: 4px;}
+.m-r-8{ margin-right: 8px;}
+
+
+/******** 4.text color **********/
+.text-white { color: #ffffff; }
+.text-danger { color:#F72E00; } 
+.text-muted { color: #98a6ad; }
+.text-primary { color:#3bc0c3;}
+.text-warning {color: #ebc142;}
+.text-success { color:#33b86c;}
+.text-info { color: #007BE8;  }
+.text-inverse { color:#14082d;}
+.text-pink { color: #F13C6E;  }
+.text-purple { color: #615ca8;}
+.text-dark { color: #797979; }
+
+/******** 5.text color **********/
+.text-weight{ font-weight: bold;}
+
+/******** 6.text sizes **********/
+.text-xs { font-size: 12px; }
+.text-sm { font-size: 16px; }
+.text-md { font-size: 20px; }
+.text-lg { font-size: 28px; }
+
+
+/******** 7.Error-pages **********/
+.wrapper-page { width: 500px; margin: 140px auto 140px;}
+.error-page { text-align: center;}
+.error-page > .error-page-content{ margin: 10px;}
+.error-page > .error-page-content >a{color:#007BE8; margin-left: 4px;}
+.error-page > .error-page-content >a:hover{ text-decoration: underline;}
+
+
+
+

@@ -1,0 +1,90 @@
+/* CSS Document */
+
+/******** 1 @font ********/
+@font-face {
+	font-family: "HATTEN";/*数字字体2*/
+	src: url('../fonts/hatten-webfont.eot');
+	src: url('../fonts/hatten-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('../fonts/hatten-webfont.woff') format('woff'), /* chrome, firefox */
+		 url('../fonts/HATTEN.TTF') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../fonts/hatten-webfont.svg#HATTEN') format('svg'); /* iOS 4.1- */
+}
+
+@font-face {
+	font-family: "FZPSCHJW";/**/
+	src: url('../fonts/FZPSCHJW.TTF') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../fonts/hatten-webfont.svg#HATTEN') format('svg'); /* iOS 4.1- */
+}
+/******** 2. Echarts Size ********/
+.echartbox1{ height: 597px;}
+.echartbox2{ height: 531px;}
+.echartbox3{ height: 196px;}
+.echartbox4{height: 160px;}
+.echartbox5{height: 255px;}
+/*.echartbox6{height: 300px;}
+.echartbox7{height: 130px;}
+.echartbox8{height: 190px;}*/
+.echartbox9{height: 220px;}
+.echartbox10{height: 270px;}
+.echartbox11{height: 620px;}
+.echartbox12{height: 480px;}
+/********* 3. Padding - Margin *********/
+.p-b-0{ padding-bottom: 0; }
+.p-b-20{padding-bottom: 20px;}
+.p-r-20{padding-right: 20px;}
+.p-l-10{ padding-left: 10px; }
+.m-l-10{margin-left: 10px;}
+.m-l-20{margin-left: 20px;}
+.m-r-8{ margin-right: 8px !important;}
+.m-r-25{margin-right: 25px;}
+.m-r-35{ margin-right: 35px;}
+.m-t-10{ margin-top: 10px; }
+.m-t-15{ margin-top: 15px; }
+.m-b-11{margin-bottom: 11px;}
+.m-b-60{margin-bottom: 60px;}
+.m-t-35{margin-top: 35px;}
+.m-l--27{margin-left: -27px;}
+.m-b--20 { margin-bottom: -20px;}
+.m-t-50{margin-top: 50px;}
+
+/**  4. square & circle icon**/
+.square{padding:0px 4px; margin-right: 10px; font-size:10px; font-weight: 500; /*border:1px solid #2196f3; */border-radius: 3px; color:#fff; background-color: #2196f3;}
+.circle{display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 10px; background-color:#b5c2ca;}
+.circle-size1{vertical-align: middle; width: 10px; height: 10px;}
+.circle-shigh{background-color: #ba1f00;}
+.circle-high{background-color: #ff2a00;}
+.circle-middle{background-color: #ff8400;}
+.circle-low{background-color: #ffdd3f;}
+.circle-primary{ background-color: #458ef9;}
+.circle-green{background-color: #25c998; margin-right: 16px;}
+.circle-blue1{background-color: #35a2ff;}
+.circle-blue2{background-color: #0065ba;}
+.circle-blue3{background-color: #12cbf6;}
+.circle-blue4{background-color: #007be8;}
+.circle-blue5{background-color: #50e3c2;}
+.circle-c6{ background-color: #4ecf69; }
+.circle-c7{ background-color: #edf175; }
+.circle-c8{ background-color: #12cbf6; }
+
+
+
+/******** 5.text color **********/
+.text-weight {font-weight: bold;}
+.text-white  {color: #fff; }
+.text-primary{color:#3bc0c3;}
+.text-info 	 {color: #007BE8;  }
+.text-blue   {color:#47a8f1;  }
+.text-gray   {color: #9fb1bb;}
+.text-green  {color: #2ecc71;}
+
+
+/******** 6.text sizes **********/
+.text-xs { font-size: 12px; }
+.text-s { font-size: 14px; }
+.text-sm { font-size: 16px; }
+.text-md { font-size: 20px; }
+.text-lg { font-size: 28px; }
+
+
+/******** 7.input width **********/
+.w-p55{width: 55% !important;}
+.w-px220{width:220px;}
+.w-px157{width:157px !important;}
