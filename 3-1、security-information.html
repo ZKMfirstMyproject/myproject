@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>资讯-安全资讯</title>
+<link rel="stylesheet" href="css/element-ui/index.css">
+<link rel="stylesheet" href="css/font.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="app">
+<header>
+	<div class="head">
+		<div class="logo"><span>成都市信息安全公共服务平台</span></div>
+		<nav>
+			 <el-menu :default-active="activeIndex2" class="el-menu-demo navigation" mode="horizontal" default-active="3-1" >
+				  <el-menu-item index="1" onclick = window.open('index.html')>首页</el-menu-item>
+				  <el-submenu index="2">
+						<template slot="title">服务</template>
+						<el-menu-item index="2-1" onclick = window.open('2-1、APT.html')>深度威胁感知</el-menu-item>
+						<el-menu-item index="2-2" onclick = window.open('2-2、Loophole.html')>安全巡航视图</el-menu-item>
+						<el-menu-item index="2-3" onclick = window.open('2-3、Anti-phishing.html')>钓鱼网站监控</el-menu-item>
+						<el-menu-item index="2-4" onclick = window.open('2-4、Domian.html')>恶意域名监控</el-menu-item>
+                        <el-menu-item index="2-5" onclick = window.open('2-5、web-service.html')>网站内容安全</el-menu-item>
+					</el-submenu>
+					<el-submenu index="3">
+						<template slot="title">资讯</template>
+						<el-menu-item index="3-1">安全资讯</el-menu-item>
+						<el-menu-item index="3-2" onclick = window.open('3-2、AS-news.html')>亚信安全新闻</el-menu-item>
+				  </el-submenu>
+                   <el-menu-item index="4" onclick = window.open('高危监测.html')>Echarts</el-menu-item>
+			 </el-menu>
+      	</nav>
+	    <div class="console-login">
+			<ul class="login-nav">
+			    <li class="console"><a href="#"><i class="cd-control"></i>控制台</a></li>
+				<li class="login"><a href="#" @click="dialoglogin = true">登入</a></li>
+		    </ul>	
+	    </div>
+		
+	</div>
+</header>
+
+
+<section  class="fixed-position">
+	<div class="banner5">
+		<div class="safeinfo-banner5-text">
+			<p>安全资讯</p>
+			<p>Domain Name Resolution Monitoring Program</p>
+		</div>
+    </div>
+    <div class="service-tabs">
+    	<ul class="service-list">
+    	 	<li class="is-active"><a href="#">安全资讯</a></li>
+    	 	<li><a href="3-2、AS-news.html">亚信安全新闻</a></li>
+    	</ul>	
+    </div>
+     
+    <div class="service">
+    	<div class="information-introduction">
+    		<h1>安全资讯</h1>
+    		<p>安全漏洞扫描是集主机漏洞、Web漏洞、App漏洞扫描为一体的专业扫描系统，是目前唯一支持IP地址段批量反查域名、内网穿透扫描的专业漏洞扫描器，可支持主机漏洞扫描、Web漏洞扫描等。</p>
+    	</div>
+    	<div  class="clearfloat security-info-content">
+    		<ul>
+    			<li>
+    				<a href="#">
+	    				<div class="security-info-icon1"></div>
+	    				<div class="security-info-text">
+	    					<h4>全国网信办代表考工aaaaaaaaaaaaa</h4>
+	    					<hr class="horizontal-short-line"/>
+	    					<p>2017-04-18</p>
+	    					<hr class="horizontal-line" />
+	    					<p class="wordlimit">第四届成都论坛如期召开，20多位各省网信办代表莅临亚信第四届成都论坛如期召开，20多位各省网信办代表莅临亚信第四届成都论坛如期召开，20多位各省网信办代表莅临亚信第四届成都论坛如期召开，20多位各省网信办代表莅临亚信</p>
+	    					<i class="el-icon-arrow-right"></i>
+	    				</div>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="#">
+	    				<div class="security-info-icon2"></div>
+	    				<div class="security-info-text">
+	    					<h4>全国网信办代表考...</h4>
+	    					<hr class="horizontal-short-line"/>
+	    					<p>2017-04-18</p>
+	    					<hr class="horizontal-line" />
+	    					<p class="wordlimit">第四届成都论坛如期召开，20多位各省网信办代表莅临亚信...</p>
+	    					<i class="el-icon-arrow-right"></i>
+	    				</div>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="#">
+    				<div class="security-info-icon3"></div>
+    				<div class="security-info-text">
+    					<h4>全国网信办代表考...</h4>
+    					<hr class="horizontal-short-line"/>
+    					<p>2017-04-18</p>
+    					<hr class="horizontal-line" />
+    					<p  class="wordlimit">第四届成都论坛如期召开，20多位各省网信办代表莅临亚信...</p>
+	    				<i class="el-icon-arrow-right"></i>
+    				</div>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="#">
+    				<div class="security-info-icon4"></div>
+    				<div class="security-info-text">
+    					<h4>全国网信办代表考...</h4>
+    					<hr class="horizontal-short-line"/>
+    					<p>2017-04-18</p>
+    					<hr class="horizontal-line" />
+    					<p  class="wordlimit">第四届成都论坛如期召开，20多位各省网信办代表莅临亚信...</p>
+	    				<i class="el-icon-arrow-right"></i>
+    				</div>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="#">
+    				<div class="security-info-icon5"></div>
+    				<div class="security-info-text">
+    					<h4>全国网信办代表考...</h4>
+    					<hr class="horizontal-short-line"/>
+    					<p>2017-04-18</p>
+    					<hr class="horizontal-line" />
+    					<p  class="wordlimit">第四届成都论坛如期召开，20多位各省网信办代表莅临亚信...</p>
+	    				<i class="el-icon-arrow-right"></i>
+    				</div>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="#">
+    				<div class="security-info-icon6"></div>
+    				<div class="security-info-text">
+    					<h4>全国网信办代表考...</h4>
+    					<hr class="horizontal-short-line"/>
+    					<p>2017-04-18</p>
+    					<hr class="horizontal-line" />
+    					<p  class="wordlimit">第四届成都论坛如期召开，20多位各省网信办代表莅临亚信...</p>
+	    				<i class="el-icon-arrow-right"></i>
+    				</div>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="#">
+    				<div class="security-info-icon7"></div>
+    				<div class="security-info-text">
+    					<h4>全国网信办代表考...</h4>
+    					<hr class="horizontal-short-line"/>
+    					<p>2017-04-18</p>
+    					<hr class="horizontal-line" />
+    					<p  class="wordlimit">第四届成都论坛如期召开，20多位各省网信办代表莅临亚信...</p>
+	    				<i class="el-icon-arrow-right"></i>
+    				</div>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="#">
+    				<div class="security-info-icon8"></div>
+    				<div class="security-info-text">
+    					<h4>全国网信办代表考...</h4>
+    					<hr class="horizontal-short-line"/>
+    					<p>2017-04-18</p>
+    					<hr class="horizontal-line" />
+    					<p  class="wordlimit">第四届成都论坛如期召开，20多位各省网信办代表莅临亚信...</p>
+	    				<i class="el-icon-arrow-right"></i>
+    				</div>
+    				</a>
+    			</li>
+    		</ul>
+    	</div>
+    	<div class="security-info-loading"><a href="#" class="loading-more"></a></div>
+    </div>
+</section>
+
+
+<footer class="clearfloat">
+    <div class="footer-asiainfo">
+    	 <ul class="footer-asiainfo-inner">
+    	 	<li class="follow-us">
+    	 		<h5 class="us-title">关注我们&nbsp;:::</h5>
+				<img src="images/QRcode.png" alt="二维码">
+				<p>@亚信安全</p>
+    	 	</li>
+    	 	<li class="link-us">
+				<h5 class="us-title">联系我们&nbsp;:::</h5>
+				<p>四川省 成都市 科学城 天府菁蓉中心 A区 8号楼</p>
+				<p><i class="el-icon-phone m-r-8"></i>(+86&nbsp;028)80256037</p>
+				<p><i class="el-icon-printer m-r-8"></i>(+86&nbsp;028)80256037</p>
+				<p><i class="el-icon-message m-r-8"></i>Ais-situation-service@asiainfo-sec.com</p>
+			</li>
+   	        <li class="about-us">
+				<h5 class="us-title">关于我们&nbsp;:::</h5>
+				<ul>
+					<li>成都亚信网络安全产业技术研究院有限公司</li>
+					<li><a href="http://www.asiainfo-sec.com">http://www.asiainfo-sec.com/</a></li>
+				</ul>
+			</li>
+   	        <li><img src="images/Asiainfo.png" alt="亚信安全"></li>
+    	 </ul>
+    </div> 
+    <div class="footer-tips">
+   	     <div class="footer-tips-inner">
+   	     	 <span>©&nbsp;2017&nbsp;版权所有 <a href="#">亚信科技（成都）有限公司</a>&nbsp;&nbsp;蜀ICP备15028617号</span>
+   	     	 <span class="float-r">川公网安备51010702000068号</span>
+   	     </div>
+    </div>
+</footer>
+<el-dialog title="" :visible.sync="dialoglogin" size="tiny" :show-close="false" :close-on-click-modal="false" center class="dialog-panel">
+	<h2>用户登录</h2>
+	<input type="text" name="user" placeholder="请输入用户名"/>
+	<input type="password" name="pass" placeholder="请输入密码"/>
+	<input type="text" name="verification" placeholder="请输入验证码" class="w-p45 float-l"/>
+	<a href="#" class="float-r"><img src="images/verification-code.png" alt="验证码" class="verif-code"/></a>
+	<button type="button" name="login" class="action-button">登录</button>
+	<p class="forget-pass clearfloat"><a href="#">忘记密码?</a></p>
+	<hr / class="dialog-success-hr"><i class="call-icon"></i>
+	<hr / class="dialog-success-hr">
+	<p class="dialog-success-jump">还没有账号？联系客服:<span>028-80256037</span></p>
+</el-dialog>
+<div id="page"></div>
+</div><!--app end-->
+</body>
+
+<script src="js/jq/jquery-1.9.1.min.js"></script>
+<script src="js/elements-js/vue.min.js"></script>
+<script src="js/elements-js/index.js"></script>
+<script src="js/app-standard.js"></script>
+<script src="js/app.js"></script>
+</html>

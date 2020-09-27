@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>网站内容安全</title>
+<link rel="stylesheet" href="css/element-ui/index.css">
+<link rel="stylesheet" href="css/font.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="app">
+<header>
+	<div class="head">
+		<div class="logo"><span>成都市信息安全公共服务平台</span></div>
+		<nav>
+			 <el-menu :default-active="activeIndex2" class="el-menu-demo navigation" mode="horizontal" default-active="2-3" >
+				  <el-menu-item index="1" onclick = window.open('index.html')>首页</el-menu-item>
+				  <el-submenu index="2">
+						<template slot="title">服务</template>
+						<el-menu-item index="2-1" onclick = window.open('2-1、APT.html')>深度威胁感知</el-menu-item>
+						<el-menu-item index="2-2" onclick = window.open('2-2、Loophole.html')>安全巡航视图</el-menu-item>
+
+						<el-menu-item index="2-3" onclick = window.open('2-3、Anti-phishing.html')>钓鱼网站监控</el-menu-item>
+
+						<el-menu-item index="2-4" onclick = window.open('2-4、Domian.html')>恶意域名监控</el-menu-item>
+						<el-menu-item index="2-5">网站内容安全</el-menu-item>
+					</el-submenu>
+					<el-submenu index="3">
+						<template slot="title">资讯</template>
+						<el-menu-item index="3-1" onclick = window.open('3-1、security-information.html')>安全资讯</el-menu-item>
+						<el-menu-item index="3-2" onclick = window.open('3-2、AS-news.html')>亚信安全新闻</el-menu-item>
+				  </el-submenu>
+				   <el-menu-item index="4" onclick = window.open('高危监测.html')>Echarts</el-menu-item>
+			 </el-menu>
+      	</nav>
+	    <div class="console-login">
+			<ul class="login-nav">
+			    <li class="console"><a href="#"><i class="cd-control"></i>控制台</a></li>
+				<li class="login"><a href="#" @click="dialoglogin = true">登入</a></li>
+		    </ul>	
+	    </div>
+		
+	</div>
+</header>
+
+
+<section  class="fixed-position">
+     <div class="banner7">
+     	<div class="panel-inner5 panel-text panel-inner-patch p-t-112">
+     		<p>Asiainfo &nbsp;&nbsp;&nbsp;Anti Phishing  Web</p>
+			<h2>网站内容安全服务</h2>
+			<p>自动检测网站中的违规内容，主要检测违规字符、违规图片、网页挂马、暗链和死链。</p>
+			<button>查看详情</button>
+     	</div>
+     </div>
+     <div class="service-tabs">
+    	  <ul class="service-list">
+    	 	<li><a href="2-1、APT.html">深度威胁感知</a></li>
+    	 	<li><a href="2-2、Loophole.html">安全巡航视图</a></li>
+    	 	<li><a href="2-3、Anti-phishing.html">钓鱼网站监控</a></li>
+    	 	<li><a href="2-4、Domian.html">恶意域名监控</a></li>
+    	 	<li class="is-active"><a href="#">网站内容安全</a></li>
+    	 </ul>
+    	
+     </div>
+     
+     <div class="service  service-p-lr60">
+     	    <div class="service-introduction">
+                <h1 class="float-l service-introduction-name">网站内容安全</h1>
+     	        <p class="float-l service-introduction-content2">网站内容安全服务的目标是自动检测网站中的违规内容，主要检测违规字符、违规图片、网页挂马、暗链和死链。本服务以SaaS模式提供服务，客户自助录入自己的资产清单，对客户资源占用几乎没有。本软件检测到违规内容后，第一时间通知客户，帮助客户及时修复网站，降低不利影响。
+     	        </p>
+          </div>
+          
+            <div class="service-introduction2-5">
+          	  <div class="product product7">
+				  <ul class="service-introduction2-5-inner">
+					<li class="clearfloat">
+						<div class="float-l"><i class="cd-guama fa-2x m-r-20"></i></div>
+						<div class="float-l w-size">
+						  <h3>网页挂马与威胁情报</h3>
+						  <p>网站内容安全服务与亚信安全威胁情报中心Exploit    Kit情报集实现无缝结合，及时发现最新、最强的网站犯罪活动。</p>
+						</div>
+					</li>
+					<li class="clearfloat">
+						 <div class="float-l"><i class="cd-weigui fa-2x m-r-20"></i></div>
+						 <div class="float-l w-size">
+							<h3>暗链、死链分析与统计</h3>
+							<p>用数据分析网站黑产趋势，网站管理问题趋势。</p>
+						 </div>
+					</li>
+					<li class="clearfloat">
+						 <div class="float-l"><i class="cd-anlian fa-2x m-r-20"></i></div>
+						 <div class="float-l w-size" >
+							<h3>违规内容统计分析</h3>
+							<p>对网站发现的违规内容进行分类标记，研究最新的犯罪趋势</p>
+						 </div>
+					</li>
+					
+				 </ul>
+              </div>
+          </div>
+      
+     </div>
+</section>
+
+
+<footer>
+    <div class="footer-asiainfo">
+    	 <ul class="footer-asiainfo-inner">
+    	 	<li class="follow-us">
+    	 		<h5 class="us-title">关注我们&nbsp;:::</h5>
+				<img src="images/QRcode.png" alt="二维码">
+				<p>@亚信安全</p>
+    	 	</li>
+    	 	<li class="link-us">
+				<h5 class="us-title">联系我们&nbsp;:::</h5>
+				<p>四川省 成都市 科学城 天府菁蓉中心 A区 8号楼</p>
+				<p><i class="el-icon-phone m-r-8"></i>(+86&nbsp;028)80256037</p>
+				<p><i class="el-icon-printer m-r-8"></i>(+86&nbsp;028)80256037</p>
+				<p><i class="el-icon-message m-r-8"></i>Ais-situation-service@asiainfo-sec.com</p>
+			</li>
+   	        <li class="about-us">
+				<h5 class="us-title">关于我们&nbsp;:::</h5>
+				<ul>
+					<li>成都亚信网络安全产业技术研究院有限公司</li>
+					<li><a href="http://www.asiainfo-sec.com">http://www.asiainfo-sec.com/</a></li>
+				</ul>
+			</li>
+   	        <li><img src="images/Asiainfo.png" alt="亚信安全"></li>
+    	 </ul>
+    </div> 
+    <div class="footer-tips">
+   	     <div class="footer-tips-inner">
+   	     	 <span>©&nbsp;2017&nbsp;版权所有 <a href="#">亚信科技（成都）有限公司</a>&nbsp;&nbsp;蜀ICP备15028617号</span>
+   	     	 <span class="float-r">川公网安备51010702000068号</span>
+   	     </div>
+    </div>
+</footer>
+<el-dialog title="" :visible.sync="dialoglogin" size="tiny" :show-close="false" :close-on-click-modal="false" center class="dialog-panel">
+	<h2>用户登录</h2>
+	<input type="text" name="user" placeholder="请输入用户名"/>
+	<input type="password" name="pass" placeholder="请输入密码"/>
+	<input type="text" name="verification" placeholder="请输入验证码" class="w-p45 float-l"/>
+	<a href="#" class="float-r"><img src="images/verification-code.png" alt="验证码" class="verif-code"/></a>
+	<button type="button" name="login" class="action-button">登录</button>
+	<p class="forget-pass clearfloat"><a href="#">忘记密码?</a></p>
+	<hr / class="dialog-success-hr"><i class="call-icon"></i>
+	<hr / class="dialog-success-hr">
+	<p class="dialog-success-jump">还没有账号？联系客服:<span>028-80256037</span></p>
+</el-dialog>
+<div id="page"></div>
+</div><!--app end-->
+</body>
+
+<script src="js/jq/jquery-1.9.1.min.js"></script>
+<script src="js/elements-js/vue.min.js"></script>
+<script src="js/elements-js/index.js"></script>
+<script src="js/app-standard.js"></script>
+<script src="js/app.js"></script>
+</html>

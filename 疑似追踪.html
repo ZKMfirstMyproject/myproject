@@ -1,0 +1,453 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>疑似追踪</title>
+ <!--element  CSS -->
+<link rel="stylesheet" href="css/element-ui/index.css">
+<link rel="stylesheet" href="css/element-ui/index-reset.css">
+<!-- animate css-->
+<link rel="stylesheet" href="css/animate2.css">
+
+<!--Icon-fonts css-->
+<link rel="stylesheet" href="asset/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="asset/icomoon/style.css">
+<!-- Custom css-->
+<link href="asset/pace/pace.theme.css" rel="stylesheet">
+<link href="css/style2.css"  rel="stylesheet">
+<link href="css/style-help2.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+       <script src="js/jq/html5shiv.js"></script>
+       <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+.left2 ul li {
+	margin-left: 19px;
+	float: left;
+}
+.left2 a {
+	font-size: 12px;
+	color: #171819;
+	font-weight: 700;
+}
+.left2 .returnfirst {
+	margin-left: 20px;
+}
+.left2 .returnfirst a {
+	font-size: 18px;
+	color: #850725;
+}
+</style>
+</head>
+<body>
+<div id="app">
+<header class="top-head clearfloat">
+	<div class="float-l">
+		<a href="" class="logo m-l-20"><img src="images/logo.png" alt="logo"></a>
+	    <span class="logo-text m-l-10">反欺诈态势</span>
+    </div>
+    <div class="left2">
+    	<ul>
+    	<li class="returnfirst"><a href="#" onclick = window.open('index.html')>返回首页</a></li>
+    		<li><a href="#" onclick = window.open('个体特征分析.html')>个体特征分析</a></li>
+    		<li><a href="#" onclick = window.open('反欺诈态势.html')>反欺诈态势</a></li>
+    		<li><a href="#" onclick = window.open('受害用户统计.html')>受害用户统计</a></li>
+    		<li><a href="#" onclick = window.open('异常行为监测.html')>异常行为监测</a></li>
+    		<li><a href="#" onclick = window.open('疑似号码统计.html')>疑似号码统计</a></li>
+    		<li><a href="#" onclick = window.open('疑似终端统计.html')>疑似终端统计</a></li>
+    		<li><a href="#" onclick = window.open('疑似追踪.html')>疑似追踪</a></li>
+    		<li><a href="#" onclick = window.open('高危监测.html')>高危监测</a></li>
+			<li><a href="#" onclick = window.open('dialog-诈骗回放.html')>dialog</a></li>
+    	</ul>
+    </div>
+     <ul class="head-nav float-r clearfloat p-r-20">
+    	<li>
+    		<el-input placeholder="seacrch......">
+    		 	 <i slot="suffix" class="el-input__icon el-icon-search"></i>
+    		</el-input>
+    	</li>
+    	<li><a class="icon-clipboard text-sm text-gray"></a></li>
+    	<li>
+    		<el-badge is-dot class="item"><a class="text-sm text-gray icon-bell"></a></el-badge>
+    	</li>
+    	<li>
+    		<el-dropdown size="medium" class="user-info">
+				<span class="el-dropdown-link">亚信安全<i class="el-icon-arrow-down el-icon--right"></i></span>
+				<el-dropdown-menu slot="dropdown" >
+					<el-dropdown-item>修改密码</el-dropdown-item>
+					<el-dropdown-item>退出</el-dropdown-item>
+				 </el-dropdown-menu>
+		    </el-dropdown>
+    	</li>
+    </ul>    
+</header>
+<aside class="left-panel">
+	<nav class="navigation">
+        <div class="sidebar-fold" id ="navbar-toggle" tip="展开／收起"><i class="fa fa-sliders"></i></div>
+	    <ul class="sidebar-one">
+			<li class="nav-item active" tip="态势视图"><a href="#">
+				 <i class="icon-situation-view"></i>
+				 <span class="nav-label">态势视图</span>
+			</a></li>
+			<li class="nav-item" tip="态势场景"><a href="#">
+				 <i class="icon-scene"></i>
+				 <span class="nav-label">态势场景</span>
+			</a></li>
+			<li class="nav-item" tip="告警管理"><a href="#">
+				<i class="icon-alarm"></i>
+				<span class="nav-label">告警管理</span>
+			</a></li>
+			<li class="nav-item" tip="态势预警"><a href="#">
+				<i class="icon-save-log"></i>
+				<span class="nav-label">态势预警</span>
+			</a></li>
+			<li class="nav-item" tip="威胁情报"><a href="#">
+				<i class="icon-intelligence-info"></i>
+				<span class="nav-label">威胁情报</span>
+			</a></li>
+			<li class="nav-item" tip="智能搜索"><a href="#">
+				<i class="icon-smartsearch"></i>
+				<span class="nav-label">智能搜索</span>
+			</a></li>
+			<li class="nav-item" tip="态势大屏"><a href="#" data-submenu="7">
+				<i class="icon-situational"></i>
+				<span class="nav-label">态势大屏</span>
+			</a></li>
+			<li class="nav-item" tip="系统管理"><a href="#">
+				<i class="icon-setting"></i>
+				<span class="nav-label">系统管理</span>
+			</a></li>
+			<li class="nav-item" tip="SDC管理"><a href="#">
+				<i class="icon-data-center"></i>
+				<span class="nav-label">SDC管理</span>
+			</a></li>
+			<li class="nav-item" tip="报表模块"><a href="#">
+				<i class="icon-report"></i>
+				<span class="nav-label">报表模块</span>
+			</a></li>
+		</ul>
+	</nav>
+	<nav class="sub-navigation">
+	    <div class="sidebar-subnav-head">
+	    	<span class="sidebar-subnav-title">数据中心</span>
+	    	<i class="fa fa-outdent" id="sidebar-subnav-collapse"></i>
+	    </div>
+	    <div class="sidebar-subnav-list">
+			<ul class="second-mune hidden">
+				<li class="cascade">
+					<a href="#">
+					   <span>全球态势</span><i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+					  <li class=""><a href="#"> 场景视图</a></li>
+					  <li><a href="#"> 数据视图</a></li>
+					</ul>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>恶意IP</span><i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+					  <li class=""><a href="#"> 场景视图</a></li>
+					  <li><a href="#"> 数据视图</a></li>
+					</ul>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>恶意DOMAIN</span><i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+					  <li class=""><a href="#"> 场景视图</a></li>
+					  <li><a href="#"> 数据视图</a></li>
+					</ul>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>恶意URL</span><i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+					  <li class=""><a href="#"> 场景视图</a></li>
+					  <li><a href="#"> 数据视图</a></li>
+					</ul>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>漏洞</span><i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+					  <li class=""><a href="#"> 场景视图</a></li>
+					  <li><a href="#"> 数据视图</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="second-mune hidden">
+				<li class="cascade">
+					<a href="#">
+					   <span>DASHBOARD1-2</span><i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+					  <li class=""><a href="#"> Dashboard v1</a></li>
+					  <li><a href="#"> Dashboard v2</a></li>
+					</ul>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>DASHBOARD2</span><i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+					  <li class=""><a href="#"> Dashboard v1</a></li>
+					  <li><a href="#"> Dashboard v2</a></li>
+					</ul>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>DASHBOARD3</span>
+					</a>
+				</li>
+			</ul>
+   	 		<ul class="second-mune hidden">
+				<li class="cascade">
+					<a href="#">
+					   <span>DASHBOARD1-3</span><i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+					  <li class=""><a href="#"> Dashboard v1</a></li>
+					  <li><a href="#"> Dashboard v2</a></li>
+					</ul>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>DASHBOARD2</span>
+					</a>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>DASHBOARD3</span>
+					</a>
+				</li>
+			</ul>
+    		<ul class="second-mune hidden">
+				<li class="cascade">
+					<a href="#">
+					   <span>DASHBOARD1-4</span><i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+					  <li class=""><a href="#"> Dashboard v1</a></li>
+					  <li><a href="#"> Dashboard v2</a></li>
+					</ul>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>DASHBOARD2</span>
+					</a>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>DASHBOARD3</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="second-mune hidden">
+
+			</ul>
+			<ul class="second-mune hidden">
+			<li class="cascade">
+				<a href="#">
+					 <span>DASHBOARD1-6</span><i class="fa fa-angle-left pull-right"></i>
+				</a>
+				<ul class="treeview-menu">
+					<li class=""><a href="#"> Dashboard v1</a></li>
+					<li><a href="#"> Dashboard v2</a></li>
+				</ul>
+			</li>
+			<li class="cascade">
+				<a href="#">
+					 <span>DASHBOARD2</span>
+				</a>
+			</li>
+			<li class="cascade">
+				<a href="#">
+					 <span>DASHBOARD3</span>
+				</a>
+			</li>
+		</ul>
+	    </div>
+	</nav>
+</aside>
+<section class="content">
+    <div class="container-fluid">
+    	<div class="top-breadcrumb p-b-20">
+			<el-breadcrumb separator="/">
+			  <el-breadcrumb-item>疑似追踪</el-breadcrumb-item>
+			</el-breadcrumb>
+		</div>
+		<!--<div style="background: url(images/banner_01.png);"></div>-->
+		
+		<div class="el-panel clearfloat" style="width: 650px;z-index: 999;">
+			<div class="el-panel-body">
+				<div class="search">
+					<div class="m-b--20">
+						<el-form :inline="true" :model="form">
+							<el-form-item>
+								<el-input v-model="phone" placeholder="用户号码" id="txt"></el-input>
+							</el-form-item>
+							<el-form-item>
+								<el-date-picker v-model="value3" type="datetime"  placeholder="所有时间"></el-date-picker>
+							</el-form-item>
+							<el-form-item>
+								<el-button type="primary" id="btn">搜索</el-button>
+							</el-form-item>
+						</el-form>
+					</div>	
+				</div>
+				<div id="hoveritem"></div>
+				<div id="select_items">
+					<el-tabs v-model="activeName"  @tab-click="handleClick">
+						<el-tab-pane label="通话记录" name="first">
+							<el-checkbox-group v-model="checkList">
+								<el-checkbox label="IPHONE 6P"></el-checkbox>
+								<el-checkbox label="IPHONE X"></el-checkbox>
+							</el-checkbox-group>
+							<ul id="ul_items">
+			                	<li class="li_item">
+			                		<p class="float-l"><i class="el-icon-phone m-r-8"></i><span class="m-r-8">呼入</span>13567291729</p>
+			                		<p class="float-r">2018-03-06 09:33</p>
+			                	</li>
+			                	<li class="li_item">
+			                		<p class="float-l"><i class="el-icon-phone m-r-8"></i><span class="m-r-8">呼出</span>13567291729</p>
+			                		<p class="float-r">2018-03-06 09:33</p>
+			                	</li>
+			                	<li class="li_item">
+			                		<p class="float-l"><i class="el-icon-message m-r-8"></i><span class="m-r-8">呼入</span>13567291729</p>
+			                		<p class="float-r">2018-03-06 09:33</p>
+			                	</li>
+			                	<li class="li_item">
+			                		<p class="float-l"><i class="el-icon-message m-r-8"></i><span class="m-r-8">呼出</span>13567291729</p>
+			                		<p class="float-r">2018-03-06 09:33</p>
+			                	</li>
+			                	<li class="li_item">
+			                		<p class="float-l"><i class="el-icon-phone m-r-8"></i><span class="m-r-8">呼入</span>13567291729</p>
+			                		<p class="float-r">2018-03-06 09:33</p>
+			                	</li>
+			                	<li class="li_item">
+			                		<p class="float-l"><i class="el-icon-phone m-r-8"></i><span class="m-r-8">呼出</span>13567291729</p>
+			                		<p class="float-r">2018-03-06 09:33</p>
+			                	</li>
+			                	<li class="li_item">
+			                		<p class="float-l"><i class="el-icon-message m-r-8"></i><span class="m-r-8">呼入</span>13567291729</p>
+			                		<p class="float-r">2018-03-06 09:33</p>
+			                	</li>
+			                	<li class="li_item">
+			                		<p class="float-l"><i class="el-icon-message m-r-8"></i><span class="m-r-8">呼出</span>13567291729</p>
+			                		<p class="float-r">2018-03-06 09:33</p>
+			                	</li>
+			                </ul>
+						</el-tab-pane>
+						<el-tab-pane label="移动轨迹" name="second">
+							<el-checkbox-group v-model="checkList">
+								<el-checkbox label="IPHONE 6P"></el-checkbox>
+								<el-checkbox label="IPHONE 7"></el-checkbox>
+							</el-checkbox-group>
+							<ul id="ul_items">
+			                	<li class="li_item">
+			                		<p class="float-l"><i class="icon-local m-r-8"></i>济南路华林123号</p>
+			                		<p class="float-r">2018-03-06 09:33</p>
+			                	</li>
+			                	<li class="li_item">
+			                		<p class="float-l"><i class="icon-local m-r-8"></i>奥林匹克公园-地铁站</p>
+			                		<p class="float-r">2018-03-06 09:33</p>
+			                	</li>
+			                	<li class="li_item">
+			                		<p class="float-l"><i class="icon-local m-r-8"></i>北京市朝阳区北辰东路8号院</p>
+			                		<p class="float-r">2018-03-06 09:33</p>
+			                	</li>
+			                	<li class="li_item">
+			                		<p class="float-l"><i class="icon-local m-r-8"></i>北京市朝阳区北四环中路安立路8号</p>
+			                		<p class="float-r">2018-03-06 09:33</p>
+			                	</li>
+			                	<li class="li_item">
+			                		<p class="float-l"><i class="icon-local m-r-8"></i>北京市朝阳区安翔北路11号</p>
+			                		<p class="float-r">2018-03-06 09:33</p>
+			                	</li>
+			                </ul>
+						</el-tab-pane>
+					</el-tabs>
+					
+				</div>
+			</div>
+						
+		</div>
+    <div id="map" style="height: 550px; border: 1px solid red;background: burlywood;"></div>
+    </div>	
+</section>
+</div>
+</body>
+	<script src="js/jq/jquery-1.9.1.min.js"></script>
+    <script src="js/elements-js/vue.min.js"></script>
+    <script src="js/elements-js/index.js"></script>
+    <script type="text/javascript" src="js/app-standard.js" ></script>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="js/Plug-in/jquery.nicescroll.js"></script>	
+    <script type="text/javascript" src="js/threaten.js"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=hOBGRO3SOya6lTEHN9RQ5Wot4CASLGfp"></script>
+<script type="text/javascript">  
+  
+    //弹出列表框  
+//  $("#txt").click(function () {  
+//      $("#select_items").css('display', 'block');  
+//      return false;  
+//  }); 
+  $("#hoveritem").hover(function () { 
+        $("#select_items").css('display', 'block');  
+        $(this).css('display','none');
+        return false;  
+    });   
+ 
+// $("#btn").click(function () { 
+//      $("#select_items").css('display', 'block');  
+//      return false;  
+//  });  
+    //隐藏列表框  
+    $("body").click(function () { 
+        $("#select_items").css('display', 'none'); 
+        $("#hoveritem").css('display','block');
+    });  
+  
+    //移入移出效果  
+    $(".li_item").hover(function () {  
+        $(this).css('background-color', '#1C86EE').css('color', 'white');  
+    }, function () {  
+        $(this).css('background-color', 'white').css('color', 'black');  
+    });  
+  
+    //文本框输入  
+    $("#txt").keyup(function () {  
+  		$("#select_items").css('display', 'block');  
+  		
+        if ($("#txt").val().length <= 0) {  
+            $(".li_item").css('display', 'block');//如果什么都没填，跳出，保持全部显示状态  
+            return;  
+        }  
+  
+        $(".li_item").css('display', 'none');//如果填了，先将所有的选项隐藏  
+  
+        for (var i = 0; i < $(".div_item").length; i++) {  
+            //模糊匹配，将所有匹配项显示  
+            if ($(".li_item").eq(i).text().substr(0, $("#txt").val().length) == $("#txt").val()) {  
+                $(".li_item").eq(i).css('display', 'block');  
+            }  
+        }  
+    });  
+  
+    //项点击  
+    $(".li_item").click(function () {  
+        $("#txt").val($(this).text());  
+    });  
+ 
+  
+</script> 
+</html>
+
+

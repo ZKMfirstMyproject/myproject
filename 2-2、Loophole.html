@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>服务-漏洞监控解决方案</title>
+<link rel="stylesheet" href="css/element-ui/index.css">
+<link rel="stylesheet" href="css/font.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+<header>
+	<div class="head">
+		<div class="logo"><span>成都市信息安全公共服务平台</span></div>
+		<nav>
+			 <el-menu :default-active="activeIndex2" class="el-menu-demo navigation" mode="horizontal" default-active="2-2" >
+				  <el-menu-item index="1" onclick = window.open('index.html')>首页</el-menu-item>
+				  <el-submenu index="2">
+						<template slot="title">服务</template>
+						<el-menu-item index="2-1" onclick = window.open('2-1、APT.html')>深度威胁感知</el-menu-item>
+						<el-menu-item index="2-2">安全巡航视图</el-menu-item>
+						<el-menu-item index="2-3" onclick = window.open('2-3、Anti-phishing.html')>钓鱼网站监控</el-menu-item>
+						<el-menu-item index="2-4" onclick = window.open('2-4、Domian.html')>恶意域名监控</el-menu-item>
+						<el-menu-item index="2-5" onclick = window.open('2-5、web-service.html')>网站内容安全</el-menu-item>
+					</el-submenu>
+					<el-submenu index="3">
+						<template slot="title">资讯</template>
+						<el-menu-item index="3-1" onclick = window.open('3-1、security-information.html')>安全资讯</el-menu-item>
+						<el-menu-item index="3-2" onclick = window.open('3-2、AS-news.html')>亚信安全新闻</el-menu-item>
+				  </el-submenu>
+				   <el-menu-item index="4" onclick = window.open('高危监测.html')>Echarts</el-menu-item>
+			 </el-menu>
+      	</nav>
+	    <div class="console-login">
+			<ul class="login-nav">
+			    <li class="console"><a href="#"><i class="cd-control"></i>控制台</a></li>
+				<li class="login"><a href="#" @click="dialoglogin = true">登入</a></li>
+		    </ul>	
+	    </div>
+		
+	</div>
+</header>
+
+
+<section  class="fixed-position">
+    <div class="banner2">
+     	<div class="panel-inner2 panel-text panel-inner-patch p-t-72">
+     		<!--<div class="panel-inner2 panel-text">-->
+				<p>Asiainfo Vulnerability Monitoring</p>
+				<h2>漏洞监控解决方案</h2>
+				<p>基于持续监控的资产生命周期管理。全面发现内外网网站资产和IP资产，建立资产基线，持续监控资产的、变更、转移、销毁状态，及时发现潜在安全风险。</p>
+				<button>查看详情</button>
+			<!--</div>-->
+     	</div>
+     </div>
+     <div class="service-tabs">
+    	  <ul class="service-list">
+    	 	<li><a href="2-1、APT.html">深度威胁感知</a></li>
+    	 	<li class="is-active"><a href="#">安全巡航视图</a></li>
+    	 	<li><a href="2-3、Anti-phishing.html">钓鱼网站监控</a></li>
+    	 	<li><a href="2-4、Domian.html">恶意域名监控</a></li>
+    	 	<li><a href="2-5、web-service.html">网站内容安全</a></li>
+    	 </ul>
+    	
+     </div>
+     
+     <div class="service service-p-lr60">
+     	   <div class="service-introduction clearfloat">
+                <h1 class="float-l service-introduction-name">漏洞监控</h1>
+     	        <p class="float-l service-introduction-content">安全漏洞扫描是集主机漏洞、Web漏洞、App漏洞扫描为一体的专业扫描系统，是目前唯一支持IP地址段批量反查域名、内网穿透扫描的专业漏洞扫描器，可支持主机漏洞扫描、Web漏洞扫描等。
+     	        </p>
+          </div>
+           <div class="service-introduction2-1">
+          	  <div class="product product2">
+				  <ul class="service-introduction2-1-inner">
+					<li class="clearfloat">
+						<div class="float-l"><i class="cd-host-analysis fa-2x m-r-20"></i></div>
+						<div class="float-l w-size">
+						  <h3>主机资产探测分析</h3>
+						  <p>利用亚信安全的资产探测服务通过主动扫描、流量监控等多种资产采集方式，自动获取资产和开启的服务。识别资产指纹信息、设备类型、厂商等特征，为用户提供其互联网、内部网络中的网络拓扑、网络设备（设置有IP的设备）以及设备上的服务、系统、开放端口、协议信息等信息的报告清单，为</p>
+						</div>
+					</li>
+					<li class="clearfloat">
+						 <div class="float-l"><i class="cd-virused-count fa-2x m-r-20"></i></div>
+						 <div class="float-l w-size">
+							<h3>已知病毒统计</h3>
+							<p>已知病毒是深度威胁识别设备发现的已被确认的病毒感染事件，该事件可以通过亚信安全防病毒产品直接处理。</p>
+						 </div>
+					</li>
+					<li class="clearfloat">
+						 <div class="float-l"><i class="cd-host-count fa-2x m-r-20"></i></div>
+						 <div class="float-l w-size">
+							<h3>主机漏洞统计</h3>
+							<p>统计漏洞的类别、紧急程度、威胁程度、数量等信息。</p>
+						 </div>
+					</li>
+					<li class="clearfloat">
+						 <div class="float-l"><i class="cd-host-list fa-2x m-r-20"></i></div>
+						 <div class="float-l w-size">
+							<h3>主机漏洞列表</h3>
+							<p>发现漏洞的主机信息、风险描述、解决方案、相关编号及参考信息。</p>
+						 </div>
+					</li>
+				 </ul>
+              </div>
+          </div>
+           <div class="service-introduction2-2">
+          	  <div class="product product2-2">
+				  <ul class="service-introduction2-2-inner">
+					<li class="clearfloat">
+						<div class="float-l"><i class="cd-host-total-an fa-2x m-r-20"></i></div>
+						<div class="float-l w-size">
+						  <h3>主机总体风险分析</h3>
+						  <p>提供主机漏洞高、中、低三级别风险统计。</p>
+						</div>
+					</li>
+					<li class="clearfloat">
+						 <div class="float-l"><i class="cd-Webapp-analysis fa-2x m-r-20"></i></div>
+						 <div class="float-l w-size">
+							<h3>Web应用总体风险分析</h3>
+							<p>提供Web漏洞高、中、低三级风险统计。</p>
+						 </div>
+					</li>
+					<li class="clearfloat">
+						 <div class="float-l"><i class="cd-Webloopel-type fa-2x m-r-20"></i></div>
+						 <div class="float-l w-size">
+							<h3>Web漏洞风险类型</h3>
+							<p>提供Web漏洞风险类型分布说明。</p>
+						 </div>
+					</li>
+					<li class="clearfloat">
+						 <div class="float-l"><i class="cd-Webloopel-list fa-2x m-r-20"></i></div>
+						 <div class="float-l w-size">
+							<h3>Web漏洞列表</h3>
+							<p>提供针对SQL注入、弱密码、目录遍历、系统命令执行、越权访问、信息泄露、跨站脚本攻击、拒绝服务、资源未知可预测、逻辑错误、配置不当、内容电子欺骗、外链信息等漏洞的详细信息描述。</p>
+						 </div>
+					</li>
+					<li class="clearfloat">
+						 <div class="float-l"><i class="cd-Appscan fa-2x m-r-20"></i></div>
+						 <div class="float-l w-size">
+							<h3>App漏洞扫描</h3>
+							<p>检测APP内部存在的安全风险，对发现的安全问题给出解决建议，帮助开发者了解并提高其开发程序的安全性。</p>
+						 </div>
+					</li>
+				 </ul>
+              </div>
+          </div>
+     </div>
+</section>
+
+
+<footer>
+    <div class="footer-asiainfo">
+    	 <ul class="footer-asiainfo-inner">
+    	 	<li class="follow-us">
+    	 		<h5 class="us-title">关注我们&nbsp;:::</h5>
+				<img src="images/QRcode.png" alt="二维码">
+				<p>@亚信安全</p>
+    	 	</li>
+    	 	<li class="link-us">
+				<h5 class="us-title">联系我们&nbsp;:::</h5>
+				<p>四川省 成都市 科学城 天府菁蓉中心 A区 8号楼</p>
+				<p><i class="el-icon-phone m-r-8"></i>(+86&nbsp;028)80256037</p>
+				<p><i class="el-icon-printer m-r-8"></i>(+86&nbsp;028)80256037</p>
+				<p><i class="el-icon-message m-r-8"></i>Ais-situation-service@asiainfo-sec.com</p>
+			</li>
+   	        <li class="about-us">
+				<h5 class="us-title">关于我们&nbsp;:::</h5>
+				<ul>
+					<li>成都亚信网络安全产业技术研究院有限公司</li>
+					<li><a href="http://www.asiainfo-sec.com">http://www.asiainfo-sec.com/</a></li>
+				</ul>
+			</li>
+   	        <li><img src="images/Asiainfo.png" alt="亚信安全"></li>
+    	 </ul>
+    </div> 
+    <div class="footer-tips">
+   	     <div class="footer-tips-inner">
+   	     	 <span>©&nbsp;2017&nbsp;版权所有 <a href="#">亚信科技（成都）有限公司</a>&nbsp;&nbsp;蜀ICP备15028617号</span>
+   	     	 <span class="float-r">川公网安备51010702000068号</span>
+   	     </div>
+    </div>
+</footer>
+<el-dialog title="" :visible.sync="dialoglogin" size="tiny" :show-close="false" :close-on-click-modal="false" center class="dialog-panel">
+	<h2>用户登录</h2>
+	<input type="text" name="user" placeholder="请输入用户名"/>
+	<input type="password" name="pass" placeholder="请输入密码"/>
+	<input type="text" name="verification" placeholder="请输入验证码" class="w-p45 float-l"/>
+	<a href="#" class="float-r"><img src="images/verification-code.png" alt="验证码" class="verif-code"/></a>
+	<button type="button" name="login" class="action-button">登录</button>
+	<p class="forget-pass clearfloat"><a href="#">忘记密码?</a></p>
+	<hr / class="dialog-success-hr"><i class="call-icon"></i>
+	<hr / class="dialog-success-hr">
+	<p class="dialog-success-jump">还没有账号？联系客服:<span>028-80256037</span></p>
+</el-dialog>
+<div id="page"></div>
+</div><!--app end-->
+</body>
+
+<script src="js/jq/jquery-1.9.1.min.js"></script>
+<script src="js/elements-js/vue.min.js"></script>
+<script src="js/elements-js/index.js"></script>
+<script src="js/app-standard.js"></script>
+<script src="js/app.js"></script>
+</html>

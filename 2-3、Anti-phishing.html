@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>服务-反钓鱼网站监测方案</title>
+<link rel="stylesheet" href="css/element-ui/index.css">
+<link rel="stylesheet" href="css/font.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="app">
+<header>
+	<div class="head">
+		<div class="logo"><span>成都市信息安全公共服务平台</span></div>
+		<nav>
+			 <el-menu :default-active="activeIndex2" class="el-menu-demo navigation" mode="horizontal" default-active="2-3" >
+				  <el-menu-item index="1" onclick = window.open('index.html')>首页</el-menu-item>
+				  <el-submenu index="2">
+						<template slot="title">服务</template>
+						<el-menu-item index="2-1" onclick = window.open('2-1、APT.html')>深度威胁感知</el-menu-item>
+						<el-menu-item index="2-2" onclick = window.open('2-2、Loophole.html')>安全巡航视图</el-menu-item>
+						<el-menu-item index="2-3">钓鱼网站监控</el-menu-item>
+						<el-menu-item index="2-4" onclick = window.open('2-4、Domian.html')>恶意域名监控</el-menu-item>
+						<el-menu-item index="2-5" onclick = window.open('2-5、web-service.html')>网站内容安全</el-menu-item>
+					</el-submenu>
+					<el-submenu index="3">
+						<template slot="title">资讯</template>
+						<el-menu-item index="3-1" onclick = window.open('3-1、security-information.html')>安全资讯</el-menu-item>
+						<el-menu-item index="3-2" onclick = window.open('3-2、AS-news.html')>亚信安全新闻</el-menu-item>
+				  </el-submenu>
+				   <el-menu-item index="4" onclick = window.open('高危监测.html')>Echarts</el-menu-item>
+			 </el-menu>
+      	</nav>
+	    <div class="console-login">
+			<ul class="login-nav">
+			    <li class="console"><a href="#"><i class="cd-control"></i>控制台</a></li>
+				<li class="login"><a href="#" @click="dialoglogin = true">登入</a></li>
+		    </ul>	
+	    </div>
+		
+	</div>
+</header>
+
+
+<section  class="fixed-position">
+     <div class="banner3">
+     	<div class="panel-inner2 panel-text panel-inner-patch p-t-72">
+     		<p>Asiainfo Vulnerability Monitoring</p>
+			<h2>反钓鱼网站监测方案</h2>
+			<p>基于亚信云安全平台，主动进行大范围互联网仿冒站点的检索。数十万种域名变形搜索算法，结合针对被保护站点的定期脆弱性评估、7*24小时安全状态监测</p>
+			<button>查看详情</button>
+     	</div>
+     </div>
+     <div class="service-tabs">
+    	  <ul class="service-list">
+    	 	<li><a href="2-1、APT.html">深度威胁感知</a></li>
+    	 	<li><a href="2-2、Loophole.html">安全巡航视图</a></li>
+    	 	<li class="is-active"><a href="#">钓鱼网站监控</a></li>
+    	 	<li><a href="2-4、Domian.html">恶意域名监控</a></li>
+    	 	<li><a href="2-5、web-service.html">网站内容安全</a></li>
+    	 </ul>
+    	
+     </div>
+     
+     <div class="service  service-p-lr60">
+     	    <div class="service-introduction">
+                <h1 class="float-l service-introduction-name">反钓鱼网站监测</h1>
+     	        <p class="float-l service-introduction-content">亚信安全利用高效的算法，能够有效截取钓鱼网页的指纹，自动进行机器学习以提取最佳特征；并采用“相似度比较”技术，有效追踪各种类型钓鱼网站，能够第一时间侦测新型钓鱼网站。并提供假冒的域名信息，方便用户上报相关部门，处理该类恶意冒充者。极大地减少及避免使用用户服务的客户造成伤害，排除对企业自身声誉造成的负面影响。
+     	        </p>
+          </div>
+          
+            <div class="service-introduction3-1">
+          	  <div class="product product3">
+				  <ul class="service-introduction3-1-inner">
+					<li class="clearfloat">
+						<div class="float-l"><i class="cd-event-alarm fa-2x m-r-20"></i></div>
+						<div class="float-l w-size">
+						  <h3>事前预警评估</h3>
+						  <p>通过定期主动评估，以及实时安全监测的方式，及时找到可能被钓鱼攻击利用的弱点，第一时间协助启动紧急预案，做出响应。</p>
+						</div>
+					</li>
+					<li class="clearfloat">
+						 <div class="float-l"><i class="cd-event-defens fa-2x m-r-20"></i></div>
+						 <div class="float-l w-size">
+							<h3>事中防御阻断</h3>
+							<p>在发现钓鱼网站之后，采用多种方式控制钓鱼攻击可能带来的影响，主要包括关停域名、阻断终端用户对钓鱼网站的访问等方法。</p>
+						 </div>
+					</li>
+					<li class="clearfloat">
+						 <div class="float-l"><i class="cd-fishing fa-2x m-r-20"></i></div>
+						 <div class="float-l w-size" >
+							<h3>钓鱼网站监测</h3>
+							<p>日常监控，新威胁研究，分析威胁变化特征，更新侦测策略。</p>
+						 </div>
+					</li>
+					<li class="clearfloat">
+						 <div class="float-l"><i class="cd-fishing-notice fa-2x m-r-20"></i></div>
+						 <div class="float-l w-size">
+							<h3>钓鱼网站通报</h3>
+							<p>根据钓鱼网站监控信息采用邮件、短信等方式进行通报。</p>
+						 </div>
+					</li>
+					<li class="clearfloat">
+						 <div class="float-l"><i class="cd-fishing-result fa-2x m-r-20"></i></div>
+						 <div class="float-l w-size">
+							<h3>钓鱼网站监控结果展示</h3>
+							<p>出示翔实的仿冒网站信息取证表及预警信息。</p>
+						 </div>
+					</li>
+				 </ul>
+              </div>
+          </div>
+      
+     </div>
+</section>
+
+
+<footer>
+    <div class="footer-asiainfo">
+    	 <ul class="footer-asiainfo-inner">
+    	 	<li class="follow-us">
+    	 		<h5 class="us-title">关注我们&nbsp;:::</h5>
+				<img src="images/QRcode.png" alt="二维码">
+				<p>@亚信安全</p>
+    	 	</li>
+    	 	<li class="link-us">
+				<h5 class="us-title">联系我们&nbsp;:::</h5>
+				<p>四川省 成都市 科学城 天府菁蓉中心 A区 8号楼</p>
+				<p><i class="el-icon-phone m-r-8"></i>(+86&nbsp;028)80256037</p>
+				<p><i class="el-icon-printer m-r-8"></i>(+86&nbsp;028)80256037</p>
+				<p><i class="el-icon-message m-r-8"></i>Ais-situation-service@asiainfo-sec.com</p>
+			</li>
+   	        <li class="about-us">
+				<h5 class="us-title">关于我们&nbsp;:::</h5>
+				<ul>
+					<li>成都亚信网络安全产业技术研究院有限公司</li>
+					<li><a href="http://www.asiainfo-sec.com">http://www.asiainfo-sec.com/</a></li>
+				</ul>
+			</li>
+   	        <li><img src="images/Asiainfo.png" alt="亚信安全"></li>
+    	 </ul>
+    </div> 
+    <div class="footer-tips">
+   	     <div class="footer-tips-inner">
+   	     	 <span>©&nbsp;2017&nbsp;版权所有 <a href="#">亚信科技（成都）有限公司</a>&nbsp;&nbsp;蜀ICP备15028617号</span>
+   	     	 <span class="float-r">川公网安备51010702000068号</span>
+   	     </div>
+    </div>
+</footer>
+<el-dialog title="" :visible.sync="dialoglogin" size="tiny" :show-close="false" :close-on-click-modal="false" center class="dialog-panel">
+	<h2>用户登录</h2>
+	<input type="text" name="user" placeholder="请输入用户名"/>
+	<input type="password" name="pass" placeholder="请输入密码"/>
+	<input type="text" name="verification" placeholder="请输入验证码" class="w-p45 float-l"/>
+	<a href="#" class="float-r"><img src="images/verification-code.png" alt="验证码" class="verif-code"/></a>
+	<button type="button" name="login" class="action-button">登录</button>
+	<p class="forget-pass clearfloat"><a href="#">忘记密码?</a></p>
+	<hr / class="dialog-success-hr"><i class="call-icon"></i>
+	<hr / class="dialog-success-hr">
+	<p class="dialog-success-jump">还没有账号？联系客服:<span>028-80256037</span></p>
+</el-dialog>
+<div id="page"></div>
+</div><!--app end-->
+</body>
+
+<script src="js/jq/jquery-1.9.1.min.js"></script>
+<script src="js/elements-js/vue.min.js"></script>
+<script src="js/elements-js/index.js"></script>
+<script src="js/app-standard.js"></script>
+<script src="js/app.js"></script>
+</html>

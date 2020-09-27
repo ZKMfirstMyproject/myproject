@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>dialog-诈骗回放</title>
+ <!--element  CSS -->
+<link rel="stylesheet" href="css/element-ui/index.css">
+<link rel="stylesheet" href="css/element-ui/index-reset.css">
+
+
+<!-- Custom css-->
+<link href="css/style2.css"  rel="stylesheet">
+<link href="css/style-help2.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+<div id="app">
+<el-dialog title="1312590091-诈骗回放" :visible.sync="dialogFordisposal" size="tiny" :before-close="handleClose" class="dialog-panel">
+ 	<div class="echartbox10" id="box63"></div>
+</el-dialog>
+</div>
+
+
+</body>
+ 	<script src="js/jq/jquery-1.9.1.min.js"></script>
+    <script src="js/elements-js/vue.min.js"></script>
+    <script src="js/elements-js/index.js"></script>
+    <script src="js/app-standard2.js" ></script>
+	<script src="js/echarts/echarts.min.js"></script>
+	<!--<script src="js/echarts-usercount.js"></script> -->
+	<script>
+var myChart5 = echarts.init(document.getElementById('box63'));
+var itemStyle = {
+    normal: {
+    },
+    emphasis: {
+        barBorderWidth: 1,
+        shadowBlur: 10,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowColor: 'rgba(0,0,0,0.5)'
+    }
+};
+
+var option5 = {
+    color:['#990000','#ff0000','#ff9900','#ffff00'],
+    legend: {
+        data: ['呼入电话', '呼出电话', '收到短信', '发送短信'],
+        left: 'center',
+        bottom:0,
+        itemWidth:15,
+        itemHeight:15,
+    },
+	tooltip: {},
+    xAxis: {
+        data: ['3：00','6：00','9：00','11：00','14：00','17：00','21：00','24：00'],
+        silent: false,
+        axisLine: {onZero: true,lineStyle: {color: '#E1E3E4'}},
+        splitLine: {show: false},
+        splitArea: {show: false},
+        axisTick: {show:false},
+        axisLabel: {color: '#3E4956'},
+    },
+    yAxis: {
+    	type:'value',
+        splitArea: {show: false},
+        axisTick: {show:false},
+        axisLine:{lineStyle: {color: '#E1E3E4'}},
+        axisLabel: {color: '#3E4956'},
+    },
+    grid: {
+    	top:'5%',
+        left: '5%',
+        right:'5%',
+        bottom:'15%',
+        containLabel: true
+    },
+
+    series: [
+        {
+            name: '呼入电话',
+            type: 'bar',
+            stack: '总量1',
+            barWidth: 15,
+	        barGap: 1,
+	        barCategoryGap: 10,
+            itemStyle: itemStyle,
+            data: [401,250,320,190,380,360,200,108]
+        },
+        {
+            name: '呼出电话',
+            type: 'bar',
+            stack: '总量1',
+            barWidth: 15,
+	        barGap: 1,
+	        barCategoryGap: 10,
+            itemStyle: itemStyle,
+            data: [-110,-250,-390,-255,-480,-440,-240,-120]
+        },
+        {
+            name: '收到短信',
+            type: 'bar',
+            stack: '总量2',
+            barWidth: 15,
+	        barGap: 1,
+	        barCategoryGap: 10,
+            itemStyle: itemStyle,
+            data: [270,200,100,470,360,460,410,320]
+        },
+        {
+            name: '发送短信',
+            type: 'bar',
+            stack: '总量2',
+            barWidth: 15,
+	        barGap: 1,
+	        barCategoryGap: 10,
+            itemStyle: itemStyle,
+            data: [-370,-200,-100,-280,-210,-270,-240,-190]
+        }
+    ]
+};
+
+	myChart5.setOption(option5);
+	window.onresize = function() {
+		myChart5.resize();
+	};
+	</script>
+</html>

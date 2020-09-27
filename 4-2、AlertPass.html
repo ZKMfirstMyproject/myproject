@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录-修改密码</title>
+		<link rel="stylesheet" href="css/element-ui/index.css">
+		<link rel="stylesheet" href="css/font.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		<div id="app">
+			<!--header part start-->
+			<header>
+				<div class="head">
+					<div class="logo"><span>成都市信息安全公共服务平台</span></div>
+					<nav>
+						 <el-menu :default-active="activeIndex2" class="el-menu-demo navigation" mode="horizontal" default-active="1" >
+							 <el-menu-item index="1" onclick = window.open('index.html')>首页</el-menu-item>
+							  <el-submenu index="2">
+									<template slot="title">服务</template>
+									<el-menu-item index="2-1" onclick = window.open('2-1、APT.html')>深度威胁感知</el-menu-item>
+									<el-menu-item index="2-2" onclick = window.open('2-2、Loophole.html')>安全巡航视图</el-menu-item>
+									<el-menu-item index="2-3" onclick = window.open('2-3、Anti-phishing.html')>钓鱼网站监控</el-menu-item>
+									<el-menu-item index="2-4" onclick = window.open('2-4、Domian.html')>恶意域名监控</el-menu-item>
+									<el-menu-item index="2-5" onclick = window.open('2-5、web-service.html')>网站内容安全</el-menu-item>
+							  </el-submenu>
+							  <el-submenu index="3">
+									<template slot="title">资讯</template>
+									<el-menu-item index="3-1" onclick = window.open('3-1、security-information.html')>安全资讯</el-menu-item>
+									<el-menu-item index="3-2" onclick = window.open('3-2、AS-news.html')>亚信安全新闻</el-menu-item>
+							  </el-submenu>
+							   <el-menu-item index="4" onclick = window.open('高危监测.html')>Echarts</el-menu-item>
+						</el-menu>
+			      	</nav>
+				    <div class="console-login">
+						<ul class="login-nav">
+						    <li class="console"><a href="#"><i class="cd-control"></i>控制台</a></li>
+							<li class="login"><a href="#" @click="dialoglogin = true">登入</a></li>
+					    </ul>	
+				    </div>
+					
+				</div>
+			</header>
+			<!--header part end-->
+			<section   class="fixed-position">
+				<div class="detail-info-breadnav">
+					<p class="subtitle">修改密码</p>
+				</div>
+				<div class="service">
+					<div class="login-panel">
+						<!--<fieldset>-->
+							<h5>Ais-service@asiainfo-sec.com</h5>
+							<input type="password" name="oldpass" placeholder="请输入旧密码"/>
+							<input type="password" name="newpass" placeholder="请输入新密码"/>
+							<input type="password" name="cpass" placeholder="请确认新密码"/>
+							<button type="button" name="submit" class="action-button"  @click="dialogverify = true">确认</button>
+						<!--</fieldset>-->
+					</div>
+				</div>
+			</section>
+			<footer class="clearfloat">
+				<div class="footer-asiainfo">
+					<ul class="footer-asiainfo-inner">
+						<li class="follow-us">
+							<h5 class="us-title">关注我们&nbsp;:::</h5>
+							<img src="images/QRcode.png" alt="二维码">
+							<p>@亚信安全</p>
+						</li>
+						<li class="link-us">
+							<h5 class="us-title">联系我们&nbsp;:::</h5>
+							<p>四川省 成都市 科学城 天府菁蓉中心 A区 8号楼</p>
+							<p><i class="el-icon-phone m-r-8"></i>(+86&nbsp;028)80256037</p>
+							<p><i class="el-icon-printer m-r-8"></i>(+86&nbsp;028)80256037</p>
+							<p><i class="el-icon-message m-r-8"></i>Ais-situation-service@asiainfo-sec.com</p>
+						</li>
+						<li class="about-us">
+							<h5 class="us-title">关于我们&nbsp;:::</h5>
+							<ul>
+								<li>成都亚信网络安全产业技术研究院有限公司</li>
+								<li>
+									<a href="http://www.asiainfo-sec.com">http://www.asiainfo-sec.com/</a>
+								</li>
+							</ul>
+						</li>
+						<li><img src="images/Asiainfo.png" alt="亚信安全"></li>
+					</ul>
+				</div>
+				<div class="footer-tips">
+					<div class="footer-tips-inner">
+						<span>©&nbsp;2017&nbsp;版权所有 <a href="#">亚信科技（成都）有限公司</a>&nbsp;&nbsp;蜀ICP备15028617号</span>
+						<span class="float-r">川公网安备51010702000068号</span>
+					</div>
+				</div>
+			</footer>
+			
+			
+			<el-dialog title="" :visible.sync="dialogverify" size="tiny" :show-close="false" center class="dialog-panel">
+				<i class="success-png m-b-20"></i>
+				<p class="dialog-success-tip">已成功找回密码</p>
+				<p class="dialog-success-account">您的账号: <span>Ais-service@asiainfo-sec.com</span></p>
+				<!--<el-button>立即登录</el-button>-->
+				<button type="button" name="login" class="action-button" @click="dialoglogin = true">立即登录</button>
+				<hr / class="dialog-success-hr"><i class="time-icon"></i>
+				<hr / class="dialog-success-hr">
+				<p class="dialog-success-jump"><span>5</span>秒后自动跳转到登录页面</p>
+			</el-dialog>
+			
+			<el-dialog title="" :visible.sync="dialoglogin" size="tiny" :show-close="false" :close-on-click-modal="false" center class="dialog-panel">
+				<h2>用户登录</h2>
+				<input type="text" name="user" placeholder="请输入用户名"/>
+				<input type="text" name="pass" placeholder="请输入密码"/>
+				<input type="text" name="verification" placeholder="请输入验证码" class="w-p45 float-l"/>
+				<a href="#" class="float-r"><img src="images/verification-code.png" alt="验证码" class="verif-code"/></a>
+				<button type="button" name="login" class="action-button">登录</button>
+				<p class="forget-pass clearfloat"><a href="#">忘记密码?</a></p>
+				<hr / class="dialog-success-hr"><i class="call-icon"></i>
+				<hr / class="dialog-success-hr">
+				<p class="dialog-success-jump">还没有账号？联系客服:<span>028-80256037</span></p>
+			</el-dialog>
+			
+		</div>
+		<!--app end-->
+	</body>
+
+	<script src="js/jq/jquery-1.9.1.min.js"></script>
+	<script src="js/elements-js/vue.min.js"></script>
+	<script src="js/elements-js/index.js"></script>
+	<script src="js/app-standard.js"></script>
+	<script src="js/app.js"></script>
+
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>资讯-资讯详情</title>
+<link rel="stylesheet" href="css/element-ui/index.css">
+<link rel="stylesheet" href="css/font.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="app">
+<header>
+	<div class="head">
+		<div class="logo"><span>成都市信息安全公共服务平台</span></div>
+		<nav>
+			 <el-menu :default-active="activeIndex2" class="el-menu-demo navigation" mode="horizontal" default-active="3-1" >
+				  <el-menu-item index="1">首页</el-menu-item>
+				  <el-submenu index="2">
+						<template slot="title">服务</template>
+						<el-menu-item index="2-1">深度威胁检测</el-menu-item>
+						<el-menu-item index="2-2">漏洞监控</el-menu-item>
+						<el-menu-item index="2-3">反钓鱼网站监测</el-menu-item>
+						<el-menu-item index="2-4">域名解析监控</el-menu-item>
+						<el-menu-item index="2-5">网站内容安全</el-menu-item>
+				  </el-submenu>
+				  <el-submenu index="3">
+						<template slot="title">资讯</template>
+						<el-menu-item index="3-1">安全资讯</el-menu-item>
+						<el-menu-item index="3-2">亚信安全新闻</el-menu-item>
+				  </el-submenu>
+				   <el-menu-item index="4" onclick = window.open('高危监测.html')>Echarts</el-menu-item>
+			 </el-menu>
+      	</nav>
+	    <div class="console-login">
+			<ul class="login-nav">
+			    <li class="console"><a href="#"><i class="cd-control"></i>控制台</a></li>
+				<li class="login"><a href="#" @click="dialoglogin = true">登入</a></li>
+		    </ul>	
+	    </div>
+		
+	</div>
+</header>
+
+
+<section class="fixed-position">
+	<div class="detail-info-breadnav">
+		<div class="service">
+			<el-breadcrumb separator-class="el-icon-arrow-right">
+			  <el-breadcrumb-item :to="{ path: '/' }" class="isactive">资讯列表</el-breadcrumb-item>
+			  <el-breadcrumb-item>资讯详情</el-breadcrumb-item>
+			</el-breadcrumb>
+		</div>
+	</div>
+	<div class="detail-info-content">
+		<h1>亚信安全受邀出席2017 检法信息化融创大会综合网络安全体系保障检法信息安全</h1>
+		<p>【亚信安全】-11月24日，2017年检法信息化融合发展创新大会在京举行，亚信安全受邀出席了本次大会并分享了亚信安全如何通过涵盖业务应用安全、网络综合安全、数据安全、基础安全在内的整体安全服务能力，为检法行业的“互联网+政务”提供网络安全保障。</p>
+		<p>为方便群众办事，减少审批难、办事难，国家近年来大力推动行政审批改革，在检察院、法院等体系内加快推进“互联网+政务服务。但与此同时，网络边界模糊化、网络应用多样化、网络接入多元化，使得政务应用系统、基础网络设备等面临着较大安全风险，网络安全事件多有发生，对检法行业的互联网+政务平台建设构成了不小的挑战。</p>
+		<div class="info-img"><img alt="" src="images/detail-info.png" /></div>
+		<p>在当前的应用环境下，检法行业的互联网政务平台的接入节点朝扁平化、开放化方向发展，不仅网络环境更加复杂，而且智能终端的数量、类型的不断增长让终端管理面临巨大压力。同时，随着业务服务端逐渐向云计算平台演进，网络边界不复存在、信息所有权和管理权分离，信息资产的非授权访问成为新的安全问题。为了化解安全威胁，满足《检法信息化建设五年发展规划》等合规化需求，就需要建立安全可靠、可管可用、符合规范的安全保障体系。</p>
+		<p>为提升检法单位的安全保障能力，亚信安全建议从基础安全、数据安全、网络综合安全、业务应用安全这四个层级的安全保障出发，通过策略制定、遵从、执行等保障策略以及安全服务，持续改进完善，打造安全保障体系。</p>
+		<p>亚信安全为检法用户提供了互联网+统一身份认证平台，通过一套行之有效的安全管理框架，把账号管理、认证管理、授权管理和安全审计等管理行为进行统一的安全策略部署。在基础安全层面，亚信安全服务器深度安全防护系统Deep Security能够与虚拟化环境完美融合，通过无代理的方式为服务器提供无间歇全方位安全保护。</p>
+		<p>在大会上，亚信安全政府与城市事业部咨询总监张成旭强调：“在检法单位的政务应用中，比较关注的是移动政务的安全性，对此，亚信安全提供了虚拟手机VMI解决方案，可以将数据保留在远程服务器云端，通过设备与数据分离的方式，最大限度的屏蔽移动终端的安全威胁，处于外网的用户则可以通过安全接入功能接入工作网，实现安全的检务移动办公。根据检法单位的需求，亚信安全还提供了智能终端安全管控功能，可以在监管区域中针对手机进行实时监管，对手机使用的工作模式和生活模式设定明界限，不仅发挥了移动化的灵活性优势，还有效确保了机密数据不外泄。”</p>
+	</div>
+	
+</section>
+
+
+<footer>
+    <div class="footer-asiainfo">
+    	 <ul class="footer-asiainfo-inner">
+    	 	<li class="follow-us">
+    	 		<h5 class="us-title">关注我们&nbsp;:::</h5>
+				<img src="images/QRcode.png" alt="二维码">
+				<p>@亚信安全</p>
+    	 	</li>
+    	 	<li class="link-us">
+				<h5 class="us-title">联系我们&nbsp;:::</h5>
+				<p>四川省 成都市 科学城 天府菁蓉中心 A区 8号楼</p>
+				<p><i class="el-icon-phone m-r-8"></i>(+86&nbsp;028)80256037</p>
+				<p><i class="el-icon-printer m-r-8"></i>(+86&nbsp;028)80256037</p>
+				<p><i class="el-icon-message m-r-8"></i>Ais-situation-service@asiainfo-sec.com</p>
+			</li>
+   	        <li class="about-us">
+				<h5 class="us-title">关于我们&nbsp;:::</h5>
+				<ul>
+					<li>成都亚信网络安全产业技术研究院有限公司</li>
+					<li><a href="http://www.asiainfo-sec.com">http://www.asiainfo-sec.com/</a></li>
+				</ul>
+			</li>
+   	        <li><img src="images/Asiainfo.png" alt="亚信安全"></li>
+    	 </ul>
+    </div> 
+    <div class="footer-tips">
+   	     <div class="footer-tips-inner">
+   	     	 <span>©&nbsp;2017&nbsp;版权所有 <a href="#">亚信科技（成都）有限公司</a>&nbsp;&nbsp;蜀ICP备15028617号</span>
+   	     	 <span class="float-r">川公网安备51010702000068号</span>
+   	     </div>
+    </div>
+</footer>
+<el-dialog title="" :visible.sync="dialoglogin" size="tiny" :show-close="false" :close-on-click-modal="false" center class="dialog-panel">
+	<h2>用户登录</h2>
+	<input type="text" name="user" placeholder="请输入用户名"/>
+	<input type="text" name="pass" placeholder="请输入密码"/>
+	<input type="text" name="verification" placeholder="请输入验证码" class="w-p45 float-l"/>
+	<a href="#" class="float-r"><img src="images/verification-code.png" alt="验证码" class="verif-code"/></a>
+	<button type="button" name="login" class="action-button">登录</button>
+	<p class="forget-pass clearfloat"><a href="#">忘记密码?</a></p>
+	<hr / class="dialog-success-hr"><i class="call-icon"></i>
+	<hr / class="dialog-success-hr">
+	<p class="dialog-success-jump">还没有账号？联系客服:<span>028-80256037</span></p>
+</el-dialog>
+<div id="page"></div>
+</div><!--app end-->
+</body>
+
+<script src="js/jq/jquery-1.9.1.min.js"></script>
+<script src="js/elements-js/vue.min.js"></script>
+<script src="js/elements-js/index.js"></script>
+<script src="js/app-standard.js"></script>
+<script src="js/app.js"></script>
+</html>

@@ -1,0 +1,456 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>疑似终端统计</title>
+ <!--element  CSS -->
+<link rel="stylesheet" href="css/element-ui/index.css">
+<link rel="stylesheet" href="css/element-ui/index-reset.css">
+<!-- animate css-->
+<link rel="stylesheet" href="css/animate2.css">
+
+<!--Icon-fonts css-->
+<link rel="stylesheet" href="asset/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="asset/icomoon/style.css">
+<!-- Custom css-->
+<link href="asset/pace/pace.theme.css" rel="stylesheet">
+<link href="css/style2.css"  rel="stylesheet">
+<link href="css/style-help2.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+       <script src="js/jq/html5shiv.js"></script>
+       <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+.left2 ul li {
+	margin-left: 19px;
+	float: left;
+}
+.left2 a {
+	font-size: 12px;
+	color: #171819;
+	font-weight: 700;
+}
+.left2 .returnfirst {
+	margin-left: 20px;
+}
+.left2 .returnfirst a {
+	font-size: 18px;
+	color: #850725;
+}
+</style>
+</head>
+<body>
+<div id="app">
+<header class="top-head clearfloat">
+	<div class="float-l">
+		<a href="" class="logo m-l-20"><img src="images/logo.png" alt="logo"></a>
+	    <span class="logo-text m-l-10">反欺诈态势</span>
+    </div>
+    <div class="left2">
+    	<ul>
+    		<li class="returnfirst"><a href="#" onclick = window.open('index.html')>返回首页</a></li>
+    		<li><a href="#" onclick = window.open('个体特征分析.html')>个体特征分析</a></li>
+    		<li><a href="#" onclick = window.open('反欺诈态势.html')>反欺诈态势</a></li>
+    		<li><a href="#" onclick = window.open('受害用户统计.html')>受害用户统计</a></li>
+    		<li><a href="#" onclick = window.open('异常行为监测.html')>异常行为监测</a></li>
+    		<li><a href="#" onclick = window.open('疑似号码统计.html')>疑似号码统计</a></li>
+    		<li><a href="#" onclick = window.open('疑似终端统计.html')>疑似终端统计</a></li>
+    		<li><a href="#" onclick = window.open('疑似追踪.html')>疑似追踪</a></li>
+    		<li><a href="#" onclick = window.open('高危监测.html')>高危监测</a></li>
+			<li><a href="#" onclick = window.open('dialog-诈骗回放.html')>dialog</a></li>
+    	</ul>
+    </div>
+     <ul class="head-nav float-r clearfloat p-r-20">
+    	<li>
+    		<el-input placeholder="seacrch......">
+    		 	 <i slot="suffix" class="el-input__icon el-icon-search"></i>
+    		</el-input>
+    	</li>
+    	<li><a class="icon-clipboard text-sm text-gray"></a></li>
+    	<li>
+    		<el-badge is-dot class="item"><a class="text-sm text-gray icon-bell"></a></el-badge>
+    	</li>
+    	<li>
+    		<el-dropdown size="medium" class="user-info">
+				<span class="el-dropdown-link">亚信安全<i class="el-icon-arrow-down el-icon--right"></i></span>
+				<el-dropdown-menu slot="dropdown" >
+					<el-dropdown-item>修改密码</el-dropdown-item>
+					<el-dropdown-item>退出</el-dropdown-item>
+				 </el-dropdown-menu>
+		    </el-dropdown>
+    	</li>
+    </ul>    
+</header>
+<aside class="left-panel">
+	<nav class="navigation">
+        <div class="sidebar-fold" id ="navbar-toggle" tip="展开／收起"><i class="fa fa-sliders"></i></div>
+	    <ul class="sidebar-one">
+			<li class="nav-item active" tip="态势视图"><a href="#">
+				 <i class="icon-situation-view"></i>
+				 <span class="nav-label">态势视图</span>
+			</a></li>
+			<li class="nav-item" tip="态势场景"><a href="#">
+				 <i class="icon-scene"></i>
+				 <span class="nav-label">态势场景</span>
+			</a></li>
+			<li class="nav-item" tip="告警管理"><a href="#">
+				<i class="icon-alarm"></i>
+				<span class="nav-label">告警管理</span>
+			</a></li>
+			<li class="nav-item" tip="态势预警"><a href="#">
+				<i class="icon-save-log"></i>
+				<span class="nav-label">态势预警</span>
+			</a></li>
+			<li class="nav-item" tip="威胁情报"><a href="#">
+				<i class="icon-intelligence-info"></i>
+				<span class="nav-label">威胁情报</span>
+			</a></li>
+			<li class="nav-item" tip="智能搜索"><a href="#">
+				<i class="icon-smartsearch"></i>
+				<span class="nav-label">智能搜索</span>
+			</a></li>
+			<li class="nav-item" tip="态势大屏"><a href="#" data-submenu="7">
+				<i class="icon-situational"></i>
+				<span class="nav-label">态势大屏</span>
+			</a></li>
+			<li class="nav-item" tip="系统管理"><a href="#">
+				<i class="icon-setting"></i>
+				<span class="nav-label">系统管理</span>
+			</a></li>
+			<li class="nav-item" tip="SDC管理"><a href="#">
+				<i class="icon-data-center"></i>
+				<span class="nav-label">SDC管理</span>
+			</a></li>
+			<li class="nav-item" tip="报表模块"><a href="#">
+				<i class="icon-report"></i>
+				<span class="nav-label">报表模块</span>
+			</a></li>
+		</ul>
+	</nav>
+	<nav class="sub-navigation">
+	    <div class="sidebar-subnav-head">
+	    	<span class="sidebar-subnav-title">数据中心</span>
+	    	<i class="fa fa-outdent" id="sidebar-subnav-collapse"></i>
+	    </div>
+	    <div class="sidebar-subnav-list">
+			<ul class="second-mune hidden">
+				<li class="cascade">
+					<a href="#">
+					   <span>全球态势</span><i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+					  <li class=""><a href="#"> 场景视图</a></li>
+					  <li><a href="#"> 数据视图</a></li>
+					</ul>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>恶意IP</span><i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+					  <li class=""><a href="#"> 场景视图</a></li>
+					  <li><a href="#"> 数据视图</a></li>
+					</ul>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>恶意DOMAIN</span><i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+					  <li class=""><a href="#"> 场景视图</a></li>
+					  <li><a href="#"> 数据视图</a></li>
+					</ul>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>恶意URL</span><i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+					  <li class=""><a href="#"> 场景视图</a></li>
+					  <li><a href="#"> 数据视图</a></li>
+					</ul>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>漏洞</span><i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+					  <li class=""><a href="#"> 场景视图</a></li>
+					  <li><a href="#"> 数据视图</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="second-mune hidden">
+				<li class="cascade">
+					<a href="#">
+					   <span>DASHBOARD1-2</span><i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+					  <li class=""><a href="#"> Dashboard v1</a></li>
+					  <li><a href="#"> Dashboard v2</a></li>
+					</ul>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>DASHBOARD2</span><i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+					  <li class=""><a href="#"> Dashboard v1</a></li>
+					  <li><a href="#"> Dashboard v2</a></li>
+					</ul>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>DASHBOARD3</span>
+					</a>
+				</li>
+			</ul>
+   	 		<ul class="second-mune hidden">
+				<li class="cascade">
+					<a href="#">
+					   <span>DASHBOARD1-3</span><i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+					  <li class=""><a href="#"> Dashboard v1</a></li>
+					  <li><a href="#"> Dashboard v2</a></li>
+					</ul>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>DASHBOARD2</span>
+					</a>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>DASHBOARD3</span>
+					</a>
+				</li>
+			</ul>
+    		<ul class="second-mune hidden">
+				<li class="cascade">
+					<a href="#">
+					   <span>DASHBOARD1-4</span><i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+					  <li class=""><a href="#"> Dashboard v1</a></li>
+					  <li><a href="#"> Dashboard v2</a></li>
+					</ul>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>DASHBOARD2</span>
+					</a>
+				</li>
+				<li class="cascade">
+					<a href="#">
+					   <span>DASHBOARD3</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="second-mune hidden">
+
+			</ul>
+			<ul class="second-mune hidden">
+			<li class="cascade">
+				<a href="#">
+					 <span>DASHBOARD1-6</span><i class="fa fa-angle-left pull-right"></i>
+				</a>
+				<ul class="treeview-menu">
+					<li class=""><a href="#"> Dashboard v1</a></li>
+					<li><a href="#"> Dashboard v2</a></li>
+				</ul>
+			</li>
+			<li class="cascade">
+				<a href="#">
+					 <span>DASHBOARD2</span>
+				</a>
+			</li>
+			<li class="cascade">
+				<a href="#">
+					 <span>DASHBOARD3</span>
+				</a>
+			</li>
+		</ul>
+	    </div>
+	</nav>
+</aside>
+<section class="content">
+    <div class="container-fluid">
+    	<div class="top-breadcrumb p-b-20">
+			<el-breadcrumb separator="/">
+			  <el-breadcrumb-item>疑似终端统计</el-breadcrumb-item>
+			</el-breadcrumb>
+		</div>
+		<el-row :gutter="16">
+			<el-col>
+				<div class="el-panel">
+					<div class="el-panel-heading">
+						<h4 class="el-panel-title">终端分布</h4>
+						<el-tabs v-model="activeName" class="float-r day-tabs">
+							<el-tab-pane label="今天" name="first"></el-tab-pane>
+							<el-tab-pane label="近7天" name="second"></el-tab-pane>
+							<el-tab-pane label="近30天" name="third"></el-tab-pane>
+						</el-tabs>
+					</div>
+					<div class="clearfloat el-panel-body">
+						<el-col :span="8">
+							<div class="echartbox1" id="mapbox"></div>
+						</el-col>
+						<el-col :span="16">
+							<el-row>
+								<el-col :span="8">
+									<div class="el-panel-subtitle">终端类型分布</div>
+									<div class="echartbox5" id="radar-box71"></div>
+								</el-col>
+								<el-col :span="16">
+									<div class="el-panel-subtitle">活跃度分布</div>
+									<div class="echartbox5" id="scatter-box72"></div>
+								</el-col>
+							</el-row>
+							<el-row>
+								<el-col>
+									<div class="el-panel-subtitle">地区分布TOP</div>
+									<div class="echartbox5" id="bar-box71"></div>
+								</el-col>
+							</el-row>
+						</el-col>
+					</div>
+				</div>
+			</el-col>
+		</el-row>
+		
+		<div class="el-panel clearfloat">
+			<div class="el-panel-body">
+				<div class="search">
+					<div class="ordinary-search m-b--20">
+						<el-form :inline="true" :model="form">
+							<el-form-item>
+								<el-select v-model="terminaltype" placeholder="终端类型">
+									<el-option label="iphone 6s plus" value="1"></el-option>
+									<el-option label="iphone 6s" value="2"></el-option>
+									<el-option label="iphoneX" value="3"></el-option>
+								</el-select>
+							</el-form-item>
+							<el-form-item>
+								<el-select v-model="sourcecity" placeholder="识别地">
+									<el-option label="江苏南京" value="1"></el-option>
+									<el-option label="浙江杭州" value="2"></el-option>
+									<el-option label="福建福州" value="3"></el-option>
+								</el-select>
+							</el-form-item>
+							<el-form-item>
+								<el-date-picker v-model="value3" type="datetime"  placeholder="所有时间"></el-date-picker>
+							</el-form-item>
+							<el-form-item>
+								<el-button type="primary">搜索</el-button>
+							</el-form-item>
+						</el-form>
+						<div class="op-location">
+							<p id="search-tag1" class="search-tag"><i class="el-icon-search m-r-8"></i>高级搜索</p>
+						</div>
+					</div>
+					<div class="senior-search hidden">
+						<el-form :inline="true" :model="form" label-width="120px">
+							<el-form-item label="识别时间：">
+								<el-date-picker v-model="value3" type="datetime"  placeholder="所有时间"></el-date-picker>
+							</el-form-item>
+							<el-form-item label="终端串号：">
+								<el-input v-model="terminalphone" placeholder="所有号码"></el-input>
+							</el-form-item>
+							<el-form-item label="终端类型：">
+								<el-select v-model="terminaltype" placeholder="终端类型">
+									<el-option label="iphone 6s plus" value="1"></el-option>
+									<el-option label="iphone 6s" value="2"></el-option>
+									<el-option label="iphoneX" value="3"></el-option>
+								</el-select>
+							</el-form-item>
+							<el-form-item label="识别地">
+								<el-select v-model="sourceaddress" placeholder="所有地区">
+									<el-option label="江苏南京" value="1"></el-option>
+									<el-option label="浙江杭州" value="2"></el-option>
+									<el-option label="福建福州" value="3"></el-option>
+								</el-select>
+							</el-form-item>
+							<el-form-item label="最新活跃时间：">
+								<el-date-picker v-model="value3" type="datetime"  placeholder="所有时间"></el-date-picker>
+							</el-form-item>
+							<el-form-item label="出现次数：">
+								<el-input v-model="liveness" placeholder="所有次数"></el-input>
+							</el-form-item>
+						</el-form>
+						<div class="search-button-location">
+							<el-button type="primary">搜索</el-button>
+							<el-button type="gray">清空</el-button>
+						</div>
+						<div class="op-location">
+							<p id="search-tag2" class="search-tag search-tag02"><i class="el-icon-search m-r-8"></i>普通搜索</p>
+						</div>
+					</div>
+				</div>
+				</div>
+						<div class="">
+							<el-table :data="hrisktable"  style="width: 100%">
+								<el-table-column prop="time1" label="识别时间" align="center" sortable>
+									<template scope="scope">{{ scope.row.time1 }}</template>
+								</el-table-column>
+								<el-table-column prop="terminalphone" label="终端串号" width="200" align="center"></el-table-column>
+								<el-table-column prop="terminaltype" label="终端类型" align="center" :filters="[{text:'IPhONE 6s PLUS'}]" :filter-method="filterType">
+								</el-table-column>
+								<el-table-column prop="sourceaddress" label="识别地" align="center" :filters="[{text:'江苏南京'}, {text:'浙江杭州'},{text:'福建福州'}]" :filter-method="filterType">
+								</el-table-column>
+								<el-table-column prop="time2" label="最新活跃时间" align="center" sortable>
+									<template scope="scope">{{ scope.row.time2 }}</template>
+								</el-table-column>
+								<el-table-column prop="liveness" label="出现次数" align="center" width="200" align="left" ></el-table-column>
+								<el-table-column   label="操作" align="center" >
+									 <template scope="scope">
+										 <el-button type="text" @click="dialogter = true">终端历史</el-button>
+									 </template>
+								</el-table-column>
+							</el-table>
+					        <div class="pagelocation">
+						         <el-pagination class="pagination" :page-sizes="[10, 20, 30, 40]" :page-size="10" layout="total, sizes, prev, pager, next, jumper" :total="40">
+						         </el-pagination>
+					        </div>
+			         	</div>
+					</div>
+    </div>	
+</section>
+
+<el-dialog title="IMEI-897864112645终端历史" :visible.sync="dialogter" size="tiny" :before-close="handleClose" class="dialog-panel">
+ 	<el-table :data="hrisktable"  style="width: 100%">
+		<el-table-column prop="terminalphone" label="终端串号" width="150" align="center"></el-table-column>
+		<el-table-column prop="terminaltype" label="终端类型" align="center" :filters="[{text:'IPhONE 6s PLUS'}]" :filter-method="filterType">
+		</el-table-column>
+		<el-table-column prop="phone" label="手机号码" align="center" width="150" align="left"></el-table-column>
+		<el-table-column prop="sourceaddress" label="归属地" align="center" :filters="[{text:'江苏南京'}, {text:'浙江杭州'},{text:'福建福州'}]" :filter-method="filterType">
+		</el-table-column>
+		<el-table-column prop="sourceaddress" label="注册地" align="center" :filters="[{text:'江苏南京'}, {text:'浙江杭州'},{text:'福建福州'}]" :filter-method="filterType">
+		</el-table-column>
+		<el-table-column prop="time2" label="时间" align="center" sortable>
+			<template scope="scope">{{ scope.row.time2 }}</template>
+		</el-table-column>
+	</el-table>
+	<div class="pagelocation">
+		<el-pagination class="pagination" :page-sizes="[10, 20, 30, 40]" :page-size="10" layout="total, sizes, prev, pager, next, jumper" :total="40">
+		</el-pagination>
+	</div>
+</el-dialog>
+
+</div>
+</body>
+	<script src="js/jq/jquery-1.9.1.min.js"></script>
+    <script src="js/elements-js/vue.min.js"></script>
+    <script src="js/elements-js/index.js"></script>
+    <script type="text/javascript" src="js/app-standard.js" ></script>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="js/Plug-in/jquery.nicescroll.js"></script>	
+    <script type="text/javascript" src="js/threaten.js"></script>
+
+	<script src="js/echarts/echarts.min.js"></script>
+    <script src="js/echarts/jiangsu.js"></script>
+	<script src="js/echarts-terminaldis.js"></script>
+</html>
+
