@@ -1,0 +1,90 @@
+/* CSS Document */
+
+
+
+/*******************基础组件*********************/
+/*
+
+.el-button{ border-radius: 0;}
+.el-button--white {color: #4A5258; background-color: #ffffff; border-color: #D8D8D8;}
+.el-button--gray{ background-color: #4A5258; color:#fff; border-color: #4A5258; }
+.el-button--gray:hover,.el-button--gray:focus { background: #656b70;border-color: #656b70;color: #fff;}
+.el-button--gray.is-active, .el-button--gray:active {background: #4A5258; border-color: #4A5258; color: #fff; }
+
+.el-button--orange{ background-color: #ff8400; color:#fff; border-color: #ff8400; }
+.el-button--orange:hover,.el-button--orange:focus { background: #f19532;border-color: #f19532;color: #fff;}
+.el-button--orange.is-active, .el-button--orange:active {background: #ff8400; border-color: #ff8400; color: #fff; }
+
+.el-button--graypink{ background-color:#EEF1F6; color: #007BE8; border-color:#EEF1F6;}
+.el-button--graypink:hover{ background-color: #e2e4e7; border-color:#e2e4e7;}
+*/
+
+
+/*******************Form*********************/
+/*---------Radio单选框---------*/
+/*---------Checkbox 多选框--------*/
+
+/*---------Input 输入框--------*/
+
+/*---------InputNumber 计数器-------*/
+/*----------Select 选择器-------*/
+/*---------Cascader 级联选择器--------*/
+/*---------Switch 开关-------*/
+/*----------Slider 滑块-------*/
+/*---------TimePicker 时间选择器-------*/
+/*---------DatePicker 日期选择器--------*/
+/*---------Upload 上传--------*/
+/*---------Rate 评分-------*/
+/*---------ColorPicker 颜色选择器------*/
+/*----------Form 表单------*/
+
+/*
+.el-form-item__label{ color: #323232; font-weight: inherit;}
+.el-textarea__inner{ border-radius:none;}
+*/
+
+
+
+/*******************Data********************/
+/*---------Table 表格-------*/
+/*---------Tag 标签-------*/
+/*----------Progress 进度条------*/
+/*---------Tree 树形控件--------*/
+/*---------Pagination 分页------*/
+/*----------Badge 标记-------*/
+
+
+
+/*******************Notice********************/
+/*---------Alert 警告------*/
+/*---------Loading 加载-------*/
+/*----------Message 消息提示------*/
+/*---------MessageBox 弹框--------*/
+/*---------Notification 通知-----*/
+
+
+
+
+
+/*******************Navigation********************/
+/*---------NavMenu 导航菜单------*/
+/*---------Tabs 标签页------*/
+
+/*----------Breadcrumb 面包屑------*/
+/*.el-breadcrumb__separator {margin: 0 10px; color: #4A5258; }*/
+/*---------Dropdown 下拉菜单-------*/
+/*---------Steps 步骤条----*/
+
+
+
+/*******************other********************/
+
+
+
+
+
+
+
+
+
+
